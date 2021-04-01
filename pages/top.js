@@ -20,7 +20,7 @@ export default function Top({ movies }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { db } = await connectToDatabase();
 
   const movies = await db
